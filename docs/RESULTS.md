@@ -21,7 +21,7 @@ Modern retrieval-only experiments were recorded under the corrected 147-query, 1
 | SALAD | 147 | 92.52% | 97.96% | 99.32% | 0.73358 |
 | BoQ | 147 | 95.24% | 100.00% | 100.00% | 0.80481 |
 
-These values are independently averaged from the [SALAD](../results/modern_retrieval/tokyo_salad_metrics_by_query.csv) and [BoQ](../results/modern_retrieval/tokyo_boq_metrics_by_query.csv) query-level results using \`scripts/verify_release.py\`.
+These values are independently averaged from the [SALAD](../results/modern_retrieval/tokyo_salad_metrics_by_query.csv) and [BoQ](../results/modern_retrieval/tokyo_boq_metrics_by_query.csv) query-level results using `scripts/verify_release.py`.
 
 **SALAD and BoQ are evaluated here as retrieval-only upstream references.** The table does not represent local geometric verification or MPEF fusion.
 

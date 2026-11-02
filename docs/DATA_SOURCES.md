@@ -15,7 +15,7 @@ MPEF operates on fixed global-retrieval shortlists and the corresponding local m
 - [LightGlue](https://github.com/cvg/LightGlue)
 - [Hierarchical Localization (hloc)](https://github.com/cvg/Hierarchical-Localization)
 
-The protocol uses a deterministic local verification configuration with the declared keypoint cap, image resizing, matching confidence threshold and MAGSAC++ settings. Frozen MPEF fusion parameters are stored under \`models/\` and are separate from these upstream networks.
+The protocol uses a deterministic local verification configuration with the declared keypoint cap, image resizing, matching confidence threshold and MAGSAC++ settings. Frozen MPEF fusion parameters are stored under `models/` and are separate from these upstream networks.
 
 ## Retrieval-only context
 

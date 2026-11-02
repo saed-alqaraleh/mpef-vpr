@@ -6,7 +6,7 @@ Monotone Probabilistic Evidence Fusion (MPEF) is a fixed-candidate post-matching
 
 ## Evidence construction
 
-The feature contract is recorded in [\`configs/feature_contract.json\`](../configs/feature_contract.json) and implemented in \`src/mpef_vpr/features.py\`.
+The feature contract is recorded in [`configs/feature_contract.json`](../configs/feature_contract.json) and implemented in `src/mpef_vpr/features.py`.
 
 | Evidence group | Count | Examples |
 | --- | ---: | --- |
@@ -22,7 +22,7 @@ Each feature has a declared favorable direction. Geometric observations are comp
 
 For each feature, a direction-oriented isotonic map estimates a relevance likelihood on the FIT split. Log-odds evidence is mean-centered and combined with a nonnegative additive logistic head. Nonnegative weights preserve the specified direction of each learned feature contribution.
 
-Regularization is selected using the geographically disjoint VALIDATION split. The selected backend models use \`l1 = 0\` and \`l2 = 0.001\` under the recorded validation criterion.
+Regularization is selected using the geographically disjoint VALIDATION split. The selected backend models use `l1 = 0` and `l2 = 0.001` under the recorded validation criterion.
 
 The corresponding probability maps are fitted on a separate CALIBRATION split using monotone isotonic regression. The development protocol separates 14 FIT, 5 VALIDATION and 4 CALIBRATION GSV-Cities. Both calibration files are linked by SHA-256 to their corresponding frozen ranking model.
 
@@ -32,7 +32,7 @@ Candidate ranking follows the frozen **uncalibrated model decision score**, with
 
 ## Candidate-list depth
 
-The primary shortlist is \`K=100\`, with \`K=50\` evaluated as a sensitivity setting. The global percentile, list entropy, local percentile and agreement evidence depend on shortlist composition. Accordingly, each K value requires a separately constructed feature matrix.
+The primary shortlist is `K=100`, with `K=50` evaluated as a sensitivity setting. The global percentile, list entropy, local percentile and agreement evidence depend on shortlist composition. Accordingly, each K value requires a separately constructed feature matrix.
 
 ## Evaluation conventions
 

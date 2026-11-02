@@ -21,7 +21,7 @@ The implementation follows a fixed-candidate post-matching pipeline. It learns m
 
 ## Method
 
-\`\`\`text
+```text
 Query image
     │
     ├── Global image retrieval ──► Fixed candidate shortlist (K = 100)
@@ -40,7 +40,7 @@ Query image
                               ▼                          ▼
                        Candidate ranking        Held-out calibration
                        (fusion score)           (match probabilities)
-\`\`\`
+```
 
 The primary evaluation uses **K = 100** candidates. The K = 50 sensitivity analysis requires a separately constructed 50-candidate evidence representation; candidate-list-dependent features cannot be obtained by truncating the K = 100 feature matrix.
 
@@ -48,42 +48,42 @@ The primary evaluation uses **K = 100** candidates. The K = 50 sensitivity analy
 
 Python 3.10 or later is required.
 
-\`\`\`bash
+```bash
 git clone https://github.com/saed-alqaraleh/mpef-vpr.git
 cd mpef-vpr
 python -m pip install -e ".[test]"
-\`\`\`
+```
 
 ## Quick start
 
 Run a deterministic software example through the frozen model and calibration maps:
 
-\`\`\`bash
+```bash
 python scripts/quickstart.py --backend disk
 python scripts/quickstart.py --backend aliked
-\`\`\`
+```
 
 The quick-start example uses synthetic matching evidence to demonstrate the API. Research metrics are reported separately from this software test.
 
 To score a real fixed-candidate evidence archive:
 
-\`\`\`bash
+```bash
 python scripts/score_evidence.py \
   --backend disk \
   --k 100 \
   --evidence path/to/evidence_k100.npz \
   --output results/scored_candidates.csv
-\`\`\`
+```
 
 The input archive must satisfy [the evidence schema](schemas/evidence_npz.schema.json). For each query, the output contains the deterministic candidate order and corresponding held-out calibrated relevance probabilities.
 
 ## Verification
 
-\`\`\`bash
+```bash
 python -m pytest -q tests
 python scripts/verify_release.py
 python scripts/check_firewall.py
-\`\`\`
+```
 
 The verification suite covers feature construction, monotonicity, frozen-parameter integrity, ranking conventions, synthetic end-to-end scoring, and numerical aggregation of the archived Tokyo 24/7 retrieval results. The SHA-256 digests of the two fitted models and both independent calibration maps are checked against the corresponding experimental records.
 
@@ -104,13 +104,13 @@ These are **retrieval-only reference results**, not post-matching MPEF outputs. 
 
 | Path | Contents |
 | :-- | :-- |
-| \`src/mpef_vpr/\` | Features, monotone fusion, ranking, calibration, evidence I/O |
-| \`models/\` | Frozen DISK/ALIKED models and held-out calibration maps |
-| \`scripts/\` | Examples, evidence scoring, integrity and numerical checks |
-| \`configs/\`, \`schemas/\` | Feature definitions and machine-readable input/output contracts |
-| \`results/\` | Recorded statistical summaries and Tokyo query-level metrics |
-| \`tests/\` | Unit, integration, and frozen-artifact regression tests |
-| \`docs/\` | Method, evaluation, datasets, and reproducibility documentation |
+| `src/mpef_vpr/` | Features, monotone fusion, ranking, calibration, evidence I/O |
+| `models/` | Frozen DISK/ALIKED models and held-out calibration maps |
+| `scripts/` | Examples, evidence scoring, integrity and numerical checks |
+| `configs/`, `schemas/` | Feature definitions and machine-readable input/output contracts |
+| `results/` | Recorded statistical summaries and Tokyo query-level metrics |
+| `tests/` | Unit, integration, and frozen-artifact regression tests |
+| `docs/` | Method, evaluation, datasets, and reproducibility documentation |
 
 ## Research documentation
 
