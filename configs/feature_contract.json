@@ -1,0 +1,110 @@
+{
+  "schema": "mpef_21_feature_contract_v1",
+  "features": [
+    {
+      "name": "global_similarity_percentile",
+      "direction": "increasing",
+      "block": "global"
+    },
+    {
+      "name": "global_rank_percentile",
+      "direction": "increasing",
+      "block": "global"
+    },
+    {
+      "name": "global_query_margin",
+      "direction": "increasing",
+      "block": "global"
+    },
+    {
+      "name": "global_query_entropy",
+      "direction": "decreasing",
+      "block": "global"
+    },
+    {
+      "name": "log1p_inliers",
+      "direction": "increasing",
+      "block": "local"
+    },
+    {
+      "name": "inlier_ratio",
+      "direction": "increasing",
+      "block": "local"
+    },
+    {
+      "name": "mean_match_confidence",
+      "direction": "increasing",
+      "block": "local"
+    },
+    {
+      "name": "ransac_score",
+      "direction": "increasing",
+      "block": "local"
+    },
+    {
+      "name": "local_rank_percentile",
+      "direction": "increasing",
+      "block": "local"
+    },
+    {
+      "name": "query_hull_coverage",
+      "direction": "increasing",
+      "block": "spatial"
+    },
+    {
+      "name": "candidate_hull_coverage",
+      "direction": "increasing",
+      "block": "spatial"
+    },
+    {
+      "name": "joint_hull_coverage",
+      "direction": "increasing",
+      "block": "spatial"
+    },
+    {
+      "name": "query_spatial_entropy",
+      "direction": "increasing",
+      "block": "spatial"
+    },
+    {
+      "name": "candidate_spatial_entropy",
+      "direction": "increasing",
+      "block": "spatial"
+    },
+    {
+      "name": "median_reprojection_error",
+      "direction": "decreasing",
+      "block": "spatial"
+    },
+    {
+      "name": "p90_reprojection_error",
+      "direction": "decreasing",
+      "block": "spatial"
+    },
+    {
+      "name": "geometry_collinearity",
+      "direction": "decreasing",
+      "block": "spatial"
+    },
+    {
+      "name": "degenerate_geometry",
+      "direction": "decreasing",
+      "block": "spatial"
+    },
+    {
+      "name": "joint_rank_support",
+      "direction": "increasing",
+      "block": "agreement"
+    },
+    {
+      "name": "percentile_disagreement",
+      "direction": "decreasing",
+      "block": "agreement"
+    },
+    {
+      "name": "list_kendall_tau",
+      "direction": "increasing",
+      "block": "agreement"
+    }
+  ]
+}

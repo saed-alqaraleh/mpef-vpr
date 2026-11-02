@@ -1,0 +1,39 @@
+{
+  "frozen_manifests": [
+    {
+      "filename": "tokyo247_sutd_147_queries_v1.csv",
+      "sha256": "02360ff783514739abd5232816ff58f7f02170d52a6c5d6cce6b8e821a1db083"
+    },
+    {
+      "filename": "tokyo247_sutd_16140_database_v2.csv",
+      "sha256": "d6228d830f9ebe83ef7ea86a064317ef515099a780a9f9f1ba466f9cecbcadbe"
+    }
+  ],
+  "results": [
+    {
+      "dataset": "tokyo24/7",
+      "gallery": 16140,
+      "map_all_positives_at_100": 0.7335833151755227,
+      "model": "salad",
+      "model_weight_sha256": "e3af3d54c85056ba5533c7d5e59678cf83903d60e57fb94697a84a8202a02a47",
+      "queries": 147,
+      "recall_at_1": 0.9251700680272109,
+      "recall_at_10": 0.9931972789115646,
+      "recall_at_5": 0.9795918367346939,
+      "table_source": "authentic images, fixed 147/16140 protocol and SUTD ok/junk"
+    },
+    {
+      "dataset": "tokyo24/7",
+      "gallery": 16140,
+      "map_all_positives_at_100": 0.8048128571195883,
+      "model": "boq",
+      "model_weight_sha256": "51f052f9c6612a6b9848e41b23a2ba27ac0ba679b9870467820df5a37711f0fd",
+      "queries": 147,
+      "recall_at_1": 0.9523809523809523,
+      "recall_at_10": 1,
+      "recall_at_5": 1,
+      "table_source": "authentic images, fixed 147/16140 protocol and SUTD ok/junk"
+    }
+  ],
+  "status": "PASS"
+}
