@@ -26,6 +26,6 @@ The saved Tokyo 24/7 retrieval-only evaluation has 147 physical queries and 16,1
 
 ## Protected evaluation collections
 
-Pittsburgh30k, Mapillary Street-Level Sequences (MSLS), Tokyo 24/7, Oxford RobotCar, Gardens Point and VPAir are evaluated under their frozen original dataset protocols. Protocol-specific relevance rules, junk handling and spatial criteria must be maintained when reproducing the experiments.
+MSLS, Tokyo 24/7, Gardens Point, AmsterTime, SPEDTest, and 17-Places are evaluated under their frozen original dataset protocols. Protocol-specific relevance rules, junk handling and spatial criteria must be maintained when reproducing the experiments.
 
 The repository distributes model fusion parameters and derived evaluation summaries, not third-party source imagery or pretrained feature-extractor weights.

@@ -2,7 +2,7 @@
 
 ## Matching-aware evidence fusion
 
-MPEF was evaluated under the original fixed-candidate matching-aware VPR protocol across Pittsburgh30k, MSLS, Tokyo 24/7, Oxford RobotCar, Gardens Point, and VPAir. The [archived co-primary inference table](../results/original_evaluation/final_co_primary_inference_v1.csv) preserves the paired statistical contrasts and confidence intervals.
+MPEF was evaluated under the original fixed-candidate matching-aware VPR protocol across MSLS, Tokyo 24/7, Gardens Point, AmsterTime, SPEDTest, and 17-Places. The [archived co-primary inference table](../results/original_evaluation/final_co_primary_inference_v1.csv) preserves the paired statistical contrasts and confidence intervals.
 
 The archived pooled candidate log-loss summary under equal-dataset weighting reports **0.10956** for MPEF and **0.15741** for the calibrated logistic-stacking comparator. This comparison assesses match-probability quality and is distinct from ranking performance.
 

@@ -2,6 +2,7 @@
 
 ### Matching-Aware Visual Place Recognition
 
+[![DOI: v0.1.0](https://zenodo.org/badge/DOI/10.5281/zenodo.23882077.svg)](https://doi.org/10.5281/zenodo.23882077)
 [![Continuous integration](https://github.com/saed-alqaraleh/mpef-vpr/actions/workflows/tests.yml/badge.svg)](https://github.com/saed-alqaraleh/mpef-vpr/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Method](https://img.shields.io/badge/features-21-596b79)
@@ -97,7 +98,7 @@ The archived modern-retriever evaluation uses **147 queries**, **16,140 gallery 
 | SALAD | 92.52% | 97.96% | 99.32% | 0.73358 |
 | BoQ | 95.24% | 100.00% | 100.00% | 0.80481 |
 
-These are **retrieval-only reference results**, not post-matching MPEF outputs. The [query-level tables](results/modern_retrieval/) and numerical verification script support their aggregation. Original six-domain evidence-fusion summaries and the MSLS paired-pose comparison are documented in [Results](docs/RESULTS.md).
+These are **retrieval-only reference results**, not post-matching MPEF outputs. The [query-level tables](results/modern_retrieval/) and numerical verification script support their aggregation. The matching-aware six-benchmark evaluation covers **MSLS, Tokyo 24/7, Gardens Point, AmsterTime, SPEDTest, and 17-Places**. Its archived evidence-fusion summaries and the MSLS paired-pose comparison are documented in [Results](docs/RESULTS.md).
 
 ## Repository contents
 
@@ -122,4 +123,6 @@ The repository provides the MPEF evidence-fusion implementation and archived res
 
 ## Citation and licensing
 
-Use the versioned archival DOI associated with the relevant GitHub release once registered. Reuse permissions for the source and fitted artifacts are governed by the repository [LICENSE](LICENSE); upstream datasets and neural-network checkpoints retain their own terms.
+The archived **v0.1.0** software release has the version-specific DOI **[10.5281/zenodo.23882077](https://doi.org/10.5281/zenodo.23882077)**. Cite the DOI corresponding to the exact release used; any later release has its own archival identifier.
+
+Reuse permissions for the source and fitted artifacts are governed by the repository [LICENSE](LICENSE); upstream datasets and neural-network checkpoints retain their own terms.

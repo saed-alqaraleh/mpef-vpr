@@ -36,6 +36,6 @@ The primary shortlist is `K=100`, with `K=50` evaluated as a sensitivity setting
 
 ## Evaluation conventions
 
-The original protected test suite covers Pittsburgh30k, MSLS, Tokyo 24/7, Oxford RobotCar, Gardens Point, and VPAir. Candidate log loss and Recall@1 are distinct primary endpoints. Reported inference uses physical queries as statistical resampling units, grouping observations of the same query across retriever and matcher configurations.
+The original protected test suite covers MSLS, Tokyo 24/7, Gardens Point, AmsterTime, SPEDTest, and 17-Places. Candidate log loss and Recall@1 are distinct primary endpoints. Reported inference uses physical queries as statistical resampling units, grouping observations of the same query across retriever and matcher configurations.
 
 Further details are given in [Results](RESULTS.md) and [Reproducibility](REPRODUCIBILITY.md).
