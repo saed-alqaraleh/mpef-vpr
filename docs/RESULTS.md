@@ -1,24 +1,34 @@
-# Results and interpretation
+# Evaluation results
 
-## Archived original six-dataset comparisons
+## Matching-aware evidence fusion
 
-The source audit reports equal-dataset K=100 candidate log loss of **0.10956** for MPEF and **0.15741** for calibrated logistic stacking under the documented shared 1e-7 clipping convention. The full per-candidate evaluation arrays are **not** present in this staging repository; these are preserved archival summaries, **not independently rerun six-dataset numbers**.
+MPEF was evaluated under the original fixed-candidate matching-aware VPR protocol across Pittsburgh30k, MSLS, Tokyo 24/7, Oxford RobotCar, Gardens Point, and VPAir. The [archived co-primary inference table](../results/original_evaluation/final_co_primary_inference_v1.csv) preserves the paired statistical contrasts and confidence intervals.
 
-The saved \`results/original_evaluation/final_co_primary_inference_v1.csv\` contains the archived inferential summary. The H1 MPEF-minus-shallow-pairwise-family Recall@1 contrast is **negative**, although H2 candidate-log-loss contrast favors MPEF. Claims should distinguish superior proper-score evidence from the strongest competing ranking head. Results for the larger capacity models should not be portrayed as evidence of MPEF universally outperforming every probabilistic comparator.
+The archived pooled candidate log-loss summary under equal-dataset weighting reports **0.10956** for MPEF and **0.15741** for the calibrated logistic-stacking comparator. This comparison assesses match-probability quality and is distinct from ranking performance.
 
-## Tokyo 24/7 modern retrieval only
+For ranking, the recorded MPEF-minus-shallow-pairwise-ranker Recall@1 contrast was **−0.00901** (95% confidence interval **[−0.01452, −0.00361]**), indicating that the shallow pairwise comparator ranked more accurately on that endpoint. In the calibrated probability comparison, the recorded logistic-minus-MPEF candidate log-loss contrast was **+0.06598** (95% confidence interval **[0.05798, 0.07433]**), favoring MPEF on that specific proper-score comparison.
 
-| Retriever | Queries | Gallery | Recall@1 | Recall@5 | Recall@10 | mAP@100 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| SALAD | 147 | 16,140 | 92.52% | 97.96% | 99.32% | 0.73358 |
-| BoQ | 147 | 16,140 | 95.24% | 100.00% | 100.00% | 0.80481 |
+These contrasts concern **different objectives and comparator families**; neither result substitutes for the other. For the capacity-expanded logistic comparator, a subsequent archived comparison found a smaller log-loss advantage over MPEF. All reported comparisons retain their specific model capacities and evaluation protocols.
 
-These figures are independently averaged from saved per-query metric records by \`scripts/verify_release.py\`, under the frozen SUTD 147/16,140 and ok/junk protocol. **They are not MPEF post-matching fusion results.** The October 31 missing-Tokyo count in the earlier handoff was superseded by the November 2 Tokyo-completion record; the updated result is included here.
+The repository includes original statistical summary CSV files but does not include the complete six-domain raw candidate prediction tables required to rerun those archived model comparisons from scratch.
 
-## MSLS 25-m localization
+## Tokyo 24/7: modern retrieval reference
 
-The preserved \`results/original_evaluation/MSLS_MPEF_VS_ORIGINAL_POSE_PAIRED.csv\` contains selected paired confidence intervals from 740 physical queries. Raw pose predictions and geometric localization evidence are not included.
+Modern retrieval-only experiments were recorded under the corrected 147-query, 16,140-gallery SUTD protocol with the declared junk handling.
 
-## Transferred SALAD–ALIKED fusion
+| Method | Query count | Recall@1 | Recall@5 | Recall@10 | mAP@100 |
+| :-- | --: | --: | --: | --: | --: |
+| SALAD | 147 | 92.52% | 97.96% | 99.32% | 0.73358 |
+| BoQ | 147 | 95.24% | 100.00% | 100.00% | 0.80481 |
 
-A separate three-domain zero-refit transfer was described in a subsequent handoff. Its full source predictions and raw matching evidence are not included here, and this staging repository therefore makes no claim of having replayed that transfer.
+These values are independently averaged from the [SALAD](../results/modern_retrieval/tokyo_salad_metrics_by_query.csv) and [BoQ](../results/modern_retrieval/tokyo_boq_metrics_by_query.csv) query-level results using \`scripts/verify_release.py\`.
+
+**SALAD and BoQ are evaluated here as retrieval-only upstream references.** The table does not represent local geometric verification or MPEF fusion.
+
+## MSLS paired localization
+
+The [MSLS paired 25-m analysis](../results/original_evaluation/MSLS_MPEF_VS_ORIGINAL_POSE_PAIRED.csv) records backend/retriever-specific paired localization summaries on 740 physical queries per condition. These summary metrics are stored separately from the full raw pose outputs.
+
+## Interpretation
+
+The archived results describe calibrated candidate matching, candidate ranking, retrieval-only reference quality and geometric localization under their respective protocols. The files and scripts preserve these distinctions rather than pooling quantities with different definitions.

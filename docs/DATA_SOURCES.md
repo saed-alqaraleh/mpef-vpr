@@ -1,10 +1,31 @@
-# Official upstream code and datasets
+# Datasets and upstream dependencies
 
-This internal staging repository contains no benchmark image bytes or third-party pretrained network weights. Obtain required inputs separately and follow their licenses:
+MPEF operates on fixed global-retrieval shortlists and the corresponding local matching evidence. Benchmark images and third-party neural checkpoints are obtained from their official distributors under their respective terms.
 
-- [GSV-Cities](https://github.com/amaralibey/gsv-cities) — development data and disjoint fit/validation/calibration cities.
-- [CosPlace](https://github.com/gmberton/CosPlace) and [R2Former](https://github.com/yanyan-bit/R2Former) — original global retrievers.
-- [DISK](https://github.com/cvlab-epfl/disk), [ALIKED](https://github.com/Shiaoming/ALIKED), [LightGlue](https://github.com/cvg/LightGlue) — local matching dependencies.
-- [SALAD](https://github.com/serizba/salad) and [BoQ](https://github.com/amaralibey/Bag-of-Queries) — additional retrieval-only evaluations.
+## Development data and retrievers
 
-The protected benchmarks' original definitions, downloads, and distribution rights must be verified from the frozen protocol. Tokyo 24/7 has 147 queries, 16,140 gallery images and declared SUTD ok/junk handling. Only per-query derived metrics, not source images, are present. This repository does not grant any upstream redistribution rights.
+- [GSV-Cities](https://github.com/amaralibey/gsv-cities): geography-separated fit, validation and calibration roles.
+- [CosPlace](https://github.com/gmberton/CosPlace): global visual place retrieval.
+- [R2Former](https://github.com/yanyan-bit/R2Former): global place representation, subject to its published implementation requirements.
+
+## Local matching
+
+- [DISK](https://github.com/cvlab-epfl/disk)
+- [ALIKED](https://github.com/Shiaoming/ALIKED)
+- [LightGlue](https://github.com/cvg/LightGlue)
+- [Hierarchical Localization (hloc)](https://github.com/cvg/Hierarchical-Localization)
+
+The protocol uses a deterministic local verification configuration with the declared keypoint cap, image resizing, matching confidence threshold and MAGSAC++ settings. Frozen MPEF fusion parameters are stored under \`models/\` and are separate from these upstream networks.
+
+## Retrieval-only context
+
+- [SALAD](https://github.com/serizba/salad)
+- [Bag of Queries (BoQ)](https://github.com/amaralibey/Bag-of-Queries)
+
+The saved Tokyo 24/7 retrieval-only evaluation has 147 physical queries and 16,140 reference images. The [result manifest](../results/modern_retrieval/FINAL_TOKYO_COMPLETION.json) records the image-manifest checksums, model checkpoint fingerprints, and evaluation scope.
+
+## Protected evaluation collections
+
+Pittsburgh30k, Mapillary Street-Level Sequences (MSLS), Tokyo 24/7, Oxford RobotCar, Gardens Point and VPAir are evaluated under their frozen original dataset protocols. Protocol-specific relevance rules, junk handling and spatial criteria must be maintained when reproducing the experiments.
+
+The repository distributes model fusion parameters and derived evaluation summaries, not third-party source imagery or pretrained feature-extractor weights.
