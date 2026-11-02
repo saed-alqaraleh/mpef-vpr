@@ -1,0 +1,5 @@
+backend,retriever,contrast,diff,ci_low,ci_high,physical_queries,bootstrap_reps
+aliked,cosplace_resnet50,MPEF_minus_original_retrieval_localization25m,0.043243243243243246,0.02702702702702703,0.05945945945945946,740,5000
+aliked,r2former_global_deits_msls,MPEF_minus_original_retrieval_localization25m,0.0918918918918919,0.06891891891891892,0.11486486486486487,740,5000
+disk,cosplace_resnet50,MPEF_minus_original_retrieval_localization25m,0.032432432432432434,0.016216216216216217,0.04864864864864865,740,5000
+disk,r2former_global_deits_msls,MPEF_minus_original_retrieval_localization25m,0.08783783783783784,0.06621621621621622,0.10945945945945947,740,5000

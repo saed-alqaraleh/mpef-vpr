@@ -1,0 +1,25 @@
+{
+  "format": "mpef_evidence_npz_v1",
+  "description": "Dense fixed-K evidence. Q=query count, K=100, P=padded inlier capacity.",
+  "arrays": {
+    "query_ids": {"shape": ["Q"], "dtype": "unicode", "required": true},
+    "candidate_ids": {"shape": ["Q", "K"], "dtype": "unicode", "required": true},
+    "global_similarity": {"shape": ["Q", "K"], "dtype": "float", "orientation": "larger_is_better", "required": true},
+    "global_rank": {"shape": ["Q", "K"], "dtype": "integer", "base": 1, "required": true},
+    "inlier_count": {"shape": ["Q", "K"], "dtype": "integer", "required": true},
+    "match_count": {"shape": ["Q", "K"], "dtype": "integer", "required": true},
+    "mean_match_confidence": {"shape": ["Q", "K"], "dtype": "float", "range": [0, 1], "required": true},
+    "ransac_score": {"shape": ["Q", "K"], "dtype": "float", "orientation": "larger_is_better", "required": true},
+    "query_inlier_xy": {"shape": ["Q", "K", "P", 2], "dtype": "float", "required": true},
+    "candidate_inlier_xy": {"shape": ["Q", "K", "P", 2], "dtype": "float", "required": true},
+    "inlier_valid": {"shape": ["Q", "K", "P"], "dtype": "boolean", "required": true},
+    "reprojection_error": {"shape": ["Q", "K", "P"], "dtype": "float", "required": true},
+    "query_width": {"shape": ["Q"], "dtype": "integer", "required": true},
+    "query_height": {"shape": ["Q"], "dtype": "integer", "required": true},
+    "candidate_width": {"shape": ["Q", "K"], "dtype": "integer", "required": true},
+    "candidate_height": {"shape": ["Q", "K"], "dtype": "integer", "required": true},
+    "degenerate_geometry": {"shape": ["Q", "K"], "dtype": "boolean_or_0_1", "required": true},
+    "labels": {"shape": ["Q", "K"], "dtype": "boolean_or_0_1", "required_for": ["fit", "validation", "calibration", "evaluation"]}
+  }
+}
+

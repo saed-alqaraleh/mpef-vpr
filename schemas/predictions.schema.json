@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MPEF candidate prediction record",
+  "type": "object",
+  "required": [
+    "dataset_id", "protocol_id", "split_role", "query_id", "candidate_id",
+    "global_rank", "label", "uncalibrated_probability", "calibrated_probability",
+    "final_rank", "retriever_id", "matcher_id", "source_commit", "method_freeze_sha256"
+  ],
+  "properties": {
+    "dataset_id": {"type": "string", "minLength": 1},
+    "protocol_id": {"type": "string", "minLength": 1},
+    "split_role": {"enum": ["fit", "validation", "calibration", "locked_test", "external_test"]},
+    "query_id": {"type": "string", "minLength": 1},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "global_rank": {"type": "integer", "minimum": 1, "maximum": 100},
+    "label": {"type": "integer", "enum": [0, 1]},
+    "uncalibrated_probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "calibrated_probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "final_rank": {"type": "integer", "minimum": 1, "maximum": 100},
+    "retriever_id": {"type": "string"},
+    "matcher_id": {"type": "string"},
+    "source_commit": {"type": "string"},
+    "method_freeze_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}
+

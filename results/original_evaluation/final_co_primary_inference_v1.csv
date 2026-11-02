@@ -1,0 +1,9 @@
+analysis,k,hypothesis,effect_direction,pooling,point_estimate,ci95_low,ci95_high,bootstrap_tail_p_one_sided,bootstrap_replicates,bootstrap_seed,confirmatory,holm_adjusted_p,holm_reject_fwer_0_05
+final co-primary,100,H1,MPEF minus shallow pairwise family,equal-dataset weighting,-0.00901436530390525,-0.014517195552691205,-0.003610830297063581,0.999540004599954,100000,20260828,True,0.999540004599954,False
+query-weighted sensitivity,100,H1,MPEF minus shallow pairwise family,query-weighted,-0.008130691484038827,-0.0119833883718603,-0.004328029620734514,0.999960000399996,100000,20260828,False,,False
+final co-primary,100,H2,logistic log loss minus MPEF log loss,equal-dataset weighting,0.06598350310245599,0.057979720652151664,0.07433000649923328,9.99990000099999e-06,100000,20260828,True,1.999980000199998e-05,True
+query-weighted sensitivity,100,H2,logistic log loss minus MPEF log loss,query-weighted,0.05525687592156757,0.04893577873861199,0.061871418886306026,9.99990000099999e-06,100000,20260828,False,,False
+K=50 sensitivity,50,H1,MPEF minus shallow pairwise family,equal-dataset weighting,-0.006164538948061012,-0.011531180000493942,-0.0009365178777096052,0.9891010898910109,10000,20260878,False,,False
+K=50 query-weighted sensitivity,50,H1,MPEF minus shallow pairwise family,query-weighted,-0.005603922745922146,-0.009457245071550085,-0.0018262783948764137,0.9984001599840016,10000,20260878,False,,False
+K=50 sensitivity,50,H2,logistic log loss minus MPEF log loss,equal-dataset weighting,0.07111082327133773,0.0604495485245223,0.08189569681311269,9.999000099990002e-05,10000,20260878,False,,False
+K=50 query-weighted sensitivity,50,H2,logistic log loss minus MPEF log loss,query-weighted,0.06031531653068518,0.0519309722041164,0.06891227390005467,9.999000099990002e-05,10000,20260878,False,,False

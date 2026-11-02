@@ -1,0 +1,12 @@
+{
+  "dataset": "tokyo24/7",
+  "gallery": 16140,
+  "map_all_positives_at_100": 0.8048128571195883,
+  "model": "boq",
+  "model_weight_sha256": "51f052f9c6612a6b9848e41b23a2ba27ac0ba679b9870467820df5a37711f0fd",
+  "queries": 147,
+  "recall_at_1": 0.9523809523809523,
+  "recall_at_10": 1.0,
+  "recall_at_5": 1.0,
+  "table_source": "authentic images, fixed 147/16140 protocol and SUTD ok/junk"
+}
