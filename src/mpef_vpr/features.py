@@ -1,9 +1,7 @@
-"""Clean-room evidence features for MPEF.
+"""Directional evidence features for matching-aware visual place recognition.
 
-No feature reproduces the historical bounding-box/grid multiplier or the
-historical RRF/top-k-support score. Spatial evidence is represented by convex
-hull area, distribution entropy, residual error, and geometry degeneracy.
-Agreement is represented by empirical rank percentiles and concordance.
+Features combine global retrieval, local matching, spatial geometry, and
+agreement over the fixed candidate shortlist.
 """
 
 from __future__ import annotations

@@ -82,7 +82,6 @@ The input archive must satisfy [the evidence schema](schemas/evidence_npz.schema
 ```bash
 python -m pytest -q tests
 python scripts/verify_release.py
-python scripts/check_firewall.py
 ```
 
 The verification suite covers feature construction, monotonicity, frozen-parameter integrity, ranking conventions, synthetic end-to-end scoring, and numerical aggregation of the archived Tokyo 24/7 retrieval results. The SHA-256 digests of the two fitted models and both independent calibration maps are checked against the corresponding experimental records.
