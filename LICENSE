@@ -1,6 +1,9 @@
 Copyright (c) 2026. All rights reserved.
 
-This staging package is for internal evaluation only. Redistribution,
-public hosting, modification for external use, and publication require an
-explicit licensing decision by the rights holders. No license for third-party
-datasets, model weights, or software is implied.
+The original source code, fitted model parameters, and research artifacts in
+this repository are subject to rights-holder authorization for redistribution,
+publication, and external use. No permission for those activities is granted
+by this notice.
+
+Third-party datasets, pretrained checkpoints, and dependencies remain subject
+to their respective licenses and terms of use.
